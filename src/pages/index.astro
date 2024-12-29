@@ -1,0 +1,364 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../assets/Code.astro";
+import CodeCursos from "../assets/CodeCursos.astro"
+import Footer from "../components/Footer.astro"
+---
+
+<Layout title="ManGe | Inicio">
+  <main class="items-center">
+    <main class="bg-[url('../../public/download.png')] bg-repeat bg-auto">
+      <SectionContainer class="section py-8" id="Inicio">
+        <div class="max-w-xl">
+          <!-- Contenedor de la imagen y el nombre -->
+          <div class="flex items-center gap-4 animate-fade-in-left">
+            <!-- Imagen -->
+            <img
+              class="rounded-full size-16"
+              src="https://avatars.githubusercontent.com/u/123424785?v=4"
+              decoding="async"
+              alt="ManGe"
+            />
+            <!-- Nombre -->
+            <h1 class="text-3xl font-bold tracking-tight text-white">ManGe</h1>
+          </div>
+
+          <!-- Texto adicional -->
+          <div
+            class="mt-2 py-5 items-center space-y-2 text-lg font-medium leading-none text-white lg:mt-0 lg:flex lg:space-y-0 lg:space-x-2"
+          >
+            <p class="animate-fade-in-left">
+              Experiencia desarrollando en <span class="text-blue-600"
+                >Desarrollo Web</span
+              >
+            </p>
+          </div>
+          <!-- Botones -->
+          <nav class="flex flex-wrap animate-fade-in-left">
+            <a
+              href="mailto:42mivillar2004@gmail.com"
+              class="rounded-full px-2 lg:px-4 py-2 text-sm md:text-md text-center font-bold bg-blue-600 text-white hover:bg-blue-700 focus:outline-none"
+              aria-label="Contactar conmigo"
+              >¡Contacta conmigo!
+            </a>
+
+            <a
+              href="https://github.com/ByManGe1"
+              class="rounded-full px-2 py-2 text-sm md:text-md text-center font-bold text-white focus:outline-none"
+            >
+              <svg
+                viewBox="0 0 256 250"
+                width="24"
+                height="24"
+                fill="#fff"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid"
+              >
+                <path
+                  d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/elmange25/#"
+              class="rounded-full px-2 py-2 text-sm md:text-md text-center font-bold text-white focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                preserveAspectRatio="xMidYMid"
+                viewBox="0 0 256 256"
+                ><path
+                  fill="#fff"
+                  d="M128 23.064c34.177 0 38.225.13 51.722.745 12.48.57 19.258 2.655 23.769 4.408 5.974 2.322 10.238 5.096 14.717 9.575 4.48 4.479 7.253 8.743 9.575 14.717 1.753 4.511 3.838 11.289 4.408 23.768.615 13.498.745 17.546.745 51.723 0 34.178-.13 38.226-.745 51.723-.57 12.48-2.655 19.257-4.408 23.768-2.322 5.974-5.096 10.239-9.575 14.718-4.479 4.479-8.743 7.253-14.717 9.574-4.511 1.753-11.289 3.839-23.769 4.408-13.495.616-17.543.746-51.722.746-34.18 0-38.228-.13-51.723-.746-12.48-.57-19.257-2.655-23.768-4.408-5.974-2.321-10.239-5.095-14.718-9.574-4.479-4.48-7.253-8.744-9.574-14.718-1.753-4.51-3.839-11.288-4.408-23.768-.616-13.497-.746-17.545-.746-51.723 0-34.177.13-38.225.746-51.722.57-12.48 2.655-19.258 4.408-23.769 2.321-5.974 5.095-10.238 9.574-14.717 4.48-4.48 8.744-7.253 14.718-9.575 4.51-1.753 11.288-3.838 23.768-4.408 13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95-8.418 3.271-15.556 7.648-22.672 14.764C14.367 28.6 9.991 35.738 6.72 44.155 3.555 52.297 1.392 61.602.77 75.226.147 88.878 0 93.237 0 128c0 34.763.147 39.122.77 52.774.622 13.625 2.785 22.93 5.95 31.071 3.27 8.417 7.647 15.556 14.763 22.672 7.116 7.116 14.254 11.492 22.672 14.763 8.142 3.165 17.446 5.328 31.07 5.95 13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95 8.418-3.27 15.556-7.647 22.672-14.763 7.116-7.116 11.493-14.254 14.764-22.672 3.164-8.142 5.328-17.446 5.95-31.07.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07-3.271-8.418-7.648-15.556-14.764-22.672C227.4 14.368 220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0Zm0 62.27C91.698 62.27 62.27 91.7 62.27 128c0 36.302 29.428 65.73 65.73 65.73 36.301 0 65.73-29.428 65.73-65.73 0-36.301-29.429-65.73-65.73-65.73Zm0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667-19.103 42.667-42.667 42.667Zm83.686-110.994c0 8.484-6.876 15.36-15.36 15.36-8.483 0-15.36-6.876-15.36-15.36 0-8.483 6.877-15.36 15.36-15.36 8.484 0 15.36 6.877 15.36 15.36Z"
+                ></path></svg
+              >
+            </a>
+            <a
+              href="https://x.com/XSManGe1"
+              class="rounded-full px-2 py-2 text-sm md:text-md text-center font-bold text-white focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 1200 1227"
+                ><path
+                  fill="#fff"
+                  d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
+                ></path></svg
+              >
+            </a>
+            <a
+              href="https://open.spotify.com/user/31ek65mtbmusfigpenjd2cwnjr5q?si=0223fbf1fe2047b2"
+              class="rounded-full px-2 py-2 text-sm md:text-md text-center font-bold text-white focus:outline-none"
+            >
+              <svg
+                viewBox="0 0 256 256"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid"
+                ><path
+                  d="M128 0C57.308 0 0 57.309 0 128c0 70.696 57.309 128 128 128 70.697 0 128-57.304 128-128C256 57.314 198.697.007 127.998.007l.001-.006Zm58.699 184.614c-2.293 3.76-7.215 4.952-10.975 2.644-30.053-18.357-67.885-22.515-112.44-12.335a7.981 7.981 0 0 1-9.552-6.007 7.968 7.968 0 0 1 6-9.553c48.76-11.14 90.583-6.344 124.323 14.276 3.76 2.308 4.952 7.215 2.644 10.975Zm15.667-34.853c-2.89 4.695-9.034 6.178-13.726 3.289-34.406-21.148-86.853-27.273-127.548-14.92-5.278 1.594-10.852-1.38-12.454-6.649-1.59-5.278 1.386-10.842 6.655-12.446 46.485-14.106 104.275-7.273 143.787 17.007 4.692 2.89 6.175 9.034 3.286 13.72v-.001Zm1.345-36.293C162.457 88.964 94.394 86.71 55.007 98.666c-6.325 1.918-13.014-1.653-14.93-7.978-1.917-6.328 1.65-13.012 7.98-14.935C93.27 62.027 168.434 64.68 215.929 92.876c5.702 3.376 7.566 10.724 4.188 16.405-3.362 5.69-10.73 7.565-16.4 4.187h-.006Z"
+                  fill="white"></path></svg
+              >
+            </a>
+            <a
+              href="https://www.linkedin.com/in/miguel-angel-villarreal-torres-514826280/"
+              class="rounded-full px-2 py-2 text-sm md:text-md text-center font-bold text-white focus:outline-none"
+            >
+              <svg
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid"
+                viewBox="0 0 256 256"
+                ><path
+                  d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+                  fill="white"></path></svg
+              >
+            </a>
+          </nav>
+        </div>
+      </SectionContainer>
+      <SectionContainer>
+        <nav class="flex flex-wrap gap-4 animate-fade-in-left">
+          <a
+            href="https://github.com/ByManGe1?tab=repositories"
+            class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
+            aria-label="Contactar conmigo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="inline-block mr-2"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M16 3v18l4 -2.5v-13z"></path><path
+                d="M9.165 13.903l-4.165 3.597l-2 -1l4.333 -4.5m1.735 -1.802l6.932 -7.198v5l-4.795 4.141"
+              ></path><path d="M16 16.5l-11 -10l-2 1l13 13.5"></path></svg
+            >
+            <h3 class="text-xl font-semibold">Mis Proyectos</h3>
+            <p class="text-xs">
+              ¡Explora mis contribuciones y proyectos para ver cómo me esfuerzo
+              por mejorar constantemente!
+            </p>
+          </a>
+
+          <h2
+            id="Proyectos"
+            class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+          >
+            <Code class="size-8 animate-fade-in-left text-white" />
+            Recursos y más
+          </h2>
+
+          <a
+            href="https://amzn.eu/d/93feY8O"
+            class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
+            aria-label="Contactar conmigo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="inline-block mr-2"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
+                d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
+                d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
+                d="M12 15v-6"></path><path d="M15 11l-2 -2"></path><path
+                d="M11 7l-1.9 -1.9"></path><path
+                d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"
+              ></path></svg
+            >
+            <h3 class="text-xl font-semibold">Git y GitHub</h3>
+            <p class="text-sm text-center mt-2">
+              ¡Aprende Git y GitHub con este libro Recomendado! Autor MiduDev
+            </p>
+          </a>
+
+          <a
+            href=""
+            class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
+            aria-label="Contactar conmigo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="inline-block mr-2"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"
+              ></path><path d="M19 16h-12a2 2 0 0 0 -2 2"></path><path
+                d="M9 8h6"></path></svg
+            >
+            <h3 class="text-xl font-semibold">Libros Recomendados</h3>
+            <p class="text-sm text-center mt-2">
+              ¡Aquí dejo un listado sobre libros de Programación y 
+              Tecnología! Encontrarás títulos ideales para aprender 
+              desde conceptos básicos hasta temas avanzados, abarcando 
+              lenguajes, desarrollo web, inteligencia artificial y más.
+            </p>
+          </a>
+
+          <a
+            href=""
+            class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
+            aria-label="Contactar conmigo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="inline-block mr-2"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M3 19l18 0"></path><path
+                d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"
+              ></path></svg
+            >
+            <h3 class="text-xl font-semibold">Mi Setup</h3>
+            <p class="text-sm text-center mt-2">
+              ¡Aquí dejo un listado sobre mi setup de 
+              programación y videojuegos! Este es el espacio 
+              donde combino productividad y entretenimiento, con
+              herramientas, gadgets y periféricos diseñados para 
+              optimizar el trabajo y disfrutar al máximo los juegos.
+            </p>
+          </a>
+
+          <h2
+            id="Proyectos"
+            class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+          >
+            <CodeCursos class="size-8 animate-fade-in-left text-white" />
+            Cursos Recomendados
+          </h2>
+
+          <a
+            href="https://www.udemy.com/course/scala-desde-cero/?couponCode=MXABCARCTR24NEW"
+            class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
+            aria-label="Contactar conmigo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid"
+              viewBox="0 0 256 416"
+              width="24"
+              height="24"
+              class="inline-block mr-2"
+            >
+              <defs>
+                <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a">
+                  <stop stop-color="#4F4F4F" offset="0%"></stop>
+                  <stop offset="100%"></stop>
+                </linearGradient>
+                <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="b">
+                  <stop stop-color="white" offset="0%"></stop>
+                  <stop stop-color="white" offset="100%"></stop>
+                </linearGradient>
+              </defs>
+              <path
+                d="M0 288v-32c0-5 116-14 192-32 37 8 64 19 64 32v32c0 13-27 24-64 32-76-18-192-27-192-32"
+                fill="url(#a)"
+                transform="matrix(1 0 0 -1 0 544)"></path>
+              <path
+                d="M0 160v-32c0-5 116-14 192-32 37 8 64 19 64 32v32c0 13-27 24-64 32-76-18-192-27-192-32"
+                fill="url(#a)"
+                transform="matrix(1 0 0 -1 0 288)"></path>
+              <path
+                d="M0 224v-96c0 8 256 24 256 64v96c0-40-256-56-256-64"
+                fill="url(#b)"
+                transform="matrix(1 0 0 -1 0 416)"></path>
+              <path
+                d="M0 96V0c0 8 256 24 256 64v96c0-40-256-56-256-64"
+                fill="url(#b)"
+                transform="matrix(1 0 0 -1 0 160)"></path>
+              <path
+                d="M0 352v-96c0 8 256 24 256 64v96c0-40-256-56-256-64"
+                fill="url(#b)"
+                transform="matrix(1 0 0 -1 0 672)"></path>
+            </svg>
+            <h3 class="text-xl font-semibold">Scala desde cero</h3>
+            <p class="text-sm text-center mt-2">
+              ¡Este es un buen lenguaje de programación 
+              para bases de datos! Scala se destaca por su 
+              capacidad para manejar grandes volúmenes de datos 
+              y su integración con herramientas como Apache Spark,
+              haciéndolo ideal para aplicaciones que requieren 
+              procesamiento eficiente y escalable.
+            </p>
+          </a>
+
+          <a
+            href="https://www.udemy.com/course/curso-de-java-nivel-basico/?kw=Java+-+nivel+ba&src=sac"
+            class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
+            aria-label="Contactar conmigo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid"
+              viewBox="0 0 256 346"
+			  width="24"
+              height="24"
+              class="inline-block mr-2"
+            >
+              <path
+                d="M83 267s-14 8 9 11c27 3 41 2 71-3 0 0 8 5 19 9-67 29-153-2-99-17M74 230s-15 11 8 13c29 3 52 3 92-4 0 0 6 5 15 8-82 24-173 2-115-17"
+                fill="white"></path>
+              <path
+                d="M144 166c17 19-4 36-4 36s42-22 22-49c-18-26-32-38 44-82 0 0-119 29-62 95"
+                fill="white"></path>
+              <path
+                d="M233 295s10 8-10 15c-39 12-163 15-197 0-12-5 11-13 18-14l12-2c-14-9-89 19-38 28 138 22 251-10 215-27M89 190s-63 15-22 21c17 2 51 2 83-1 26-2 52-7 52-7l-16 9c-64 16-187 8-151-9 30-14 54-13 54-13M202 253c64-33 34-66 13-61l-7 2s2-3 6-5c41-14 73 43-14 66l2-2"
+                fill="white"></path>
+              <path
+                d="M162 0s36 36-34 91c-56 45-12 70 0 99-32-30-56-56-40-80 23-35 89-53 74-110"
+                fill="white"></path>
+              <path
+                d="M95 345c62 4 158-3 160-32 0 0-4 11-51 20-53 10-119 9-158 2 0 0 8 7 49 10"
+                fill="white"></path>
+            </svg>
+            <h3 class="text-xl font-semibold">Curso Java - Basico</h3>
+            <p class="text-sm text-center mt-2">
+              ¡Un curso nivel básico de Java para empezar a 
+              quemar cabeza! Aprende los fundamentos de este potente 
+              lenguaje, desde sintaxis básica hasta la programación 
+              orientada a objetos, y prepárate para resolver problemas y 
+              desarrollar tus primeras aplicaciones.
+            </p>
+          </a>
+        </nav>
+      </SectionContainer>
+      <Footer/>
+    </main>
+  </main>
+</Layout>

@@ -1,239 +1,75 @@
 ---
 import SectionContainer from "../components/SectionContainer.astro";
-import Code from "../assets/Code.astro";
-import CodeCursos from "../assets/CodeCursos.astro"
+import LinkItem from "./LinkItem.astro";
+
+const sections = [
+  {
+    links: [
+      {
+        href: "https://github.com/ByManGe1?tab=repositories",
+        label: "Mis GitHub Repos",
+        description:
+          "¡Explora mis contribuciones y proyectos para ver cómo me esfuerzo por mejorar constantemente!",
+      },
+    ],
+  },
+  {
+    title: "Proyectos y Mas",
+    sectionIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-terminal"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 7l5 5l-5 5"></path><path d="M12 19l7 0"></path></svg>`,
+    links: [
+      {
+        href: "https://github.com/ByManGe1/Terminal",
+        label: "Terminal",
+        description:
+          "Terminal desarrollada en C que simula una terminal de comandos de Linux. Esta terminal es capaz de ejecutar comandos básicos como ls, cd, pwd, mkdir, rmdir, rm, touch, cat, cp, mv, chmod, chown, y más.",
+      },
+      {
+        href: "https://github.com/ByManGe1/Discord-Clone",
+        label: "Discord Login Web",
+        description:
+          "¡Este proyecto es un clon de la página de inicio de sesión de Discord! Está desarrollado con HTML, CSS y JavaScript, y es una excelente manera de aprender cómo se construyen las páginas web modernas.",
+      },
+      {
+        href: "https://github.com/ByManGe1/Oauth-Discord/blob/main/index.js",
+        label: "Oauth-Discord",
+        description:
+          "¡Este es un proyecto de Oauth2 con Discord! Un Bot de Discord que se conecta a una aplicación web para permitir a los usuarios iniciar sesión con sus Servidores de Discord.",
+      },
+    ],
+  },
+  {
+    title: "Lenguajes de Programación",
+    sectionIcon: `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-device-ipad-horizontal-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11 20h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7" /><path d="M9 17h2.5" /><path d="M20 21l2 -2l-2 -2" /><path d="M17 17l-2 2l2 2" /></svg>`,
+    links: [
+      {
+        href: "https://www.udemy.com/course/scala-desde-cero/?couponCode=MXABCARCTR24NEW",
+        label: "Scala",
+        description:
+          "¡Este es un buen lenguaje de programación para bases de datos! Scala se destaca por su capacidad para manejar grandes volúmenes de datos y su integración con herramientas como Apache Spark, haciéndolo ideal para aplicaciones que requieren procesamiento eficiente y escalable.",
+      },
+      {
+        href: "https://www.udemy.com/course/curso-de-java-nivel-basico/?kw=Java+-+nivel+ba&src=sac",
+        label: "Java Principiantes",
+        description:
+          "¡Java es un lenguaje de programación popular y versátil! Es un lenguaje de programación de propósito general que se utiliza en una amplia variedad de aplicaciones, desde aplicaciones de escritorio hasta aplicaciones web y móviles.",
+      },
+    ],
+  },
+];
 ---
-
 <SectionContainer>
-    <nav class="flex flex-wrap gap-4 animate-fade-in-left">
-      <a
-        href="https://github.com/ByManGe1?tab=repositories"
-        class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
-        aria-label="Contactar conmigo"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="inline-block mr-2"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M16 3v18l4 -2.5v-13z"></path><path
-            d="M9.165 13.903l-4.165 3.597l-2 -1l4.333 -4.5m1.735 -1.802l6.932 -7.198v5l-4.795 4.141"
-          ></path><path d="M16 16.5l-11 -10l-2 1l13 13.5"></path></svg
-        >
-        <h3 class="text-xl font-semibold">Mis Proyectos</h3>
-        <p class="text-xs">
-          ¡Explora mis contribuciones y proyectos para ver cómo me esfuerzo
-          por mejorar constantemente!
-        </p>
-      </a>
-
-      <h2
-        id="Proyectos"
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <Code class="size-8 animate-fade-in-left text-white" />
-        Recursos y más
+  {sections.map(section => (
+    <div class="mb-2">
+      <h2 class="text-2xl font-bold mb-2 text-white ">
+        <div class="inline-block mr-2" set:html={section.sectionIcon}></div>
+        {section.title}
       </h2>
+      <nav class="grid gap-4">
+        {section.links.map(link => (
+          <LinkItem {...link} />
+        ))}
+      </nav>
+    </div>
+  ))}
+</SectionContainer>
 
-      <a
-        href="https://amzn.eu/d/93feY8O"
-        class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
-        aria-label="Contactar conmigo"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="inline-block mr-2"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
-            d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
-            d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
-            d="M12 15v-6"></path><path d="M15 11l-2 -2"></path><path
-            d="M11 7l-1.9 -1.9"></path><path
-            d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"
-          ></path></svg
-        >
-        <h3 class="text-xl font-semibold">Git y GitHub</h3>
-        <p class="text-sm text-center mt-2">
-          ¡Aprende Git y GitHub con este libro Recomendado de Amazon! Autor MiduDev
-        </p>
-      </a>
-
-      <a
-        href=""
-        class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
-        aria-label="Contactar conmigo"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="inline-block mr-2"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"
-          ></path><path d="M19 16h-12a2 2 0 0 0 -2 2"></path><path
-            d="M9 8h6"></path></svg
-        >
-        <h3 class="text-xl font-semibold">Libros Recomendados</h3>
-        <p class="text-sm text-center mt-2">
-          ¡Aquí dejo un listado sobre libros de Programación y 
-          Tecnología! Encontrarás títulos ideales para aprender 
-          desde conceptos básicos hasta temas avanzados, abarcando 
-          lenguajes, desarrollo web, inteligencia artificial y más.
-        </p>
-      </a>
-
-      <a
-        href=""
-        class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
-        aria-label="Contactar conmigo"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="inline-block mr-2"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M3 19l18 0"></path><path
-            d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"
-          ></path></svg
-        >
-        <h3 class="text-xl font-semibold">Mi Setup</h3>
-        <p class="text-sm text-center mt-2">
-          ¡Aquí dejo un listado sobre mi setup de 
-          programación y videojuegos! Este es el espacio 
-          donde combino productividad y entretenimiento, con
-          herramientas, gadgets y periféricos diseñados para 
-          optimizar el trabajo y disfrutar al máximo los juegos.
-        </p>
-      </a>
-
-      <h2
-        id="Proyectos"
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <CodeCursos class="size-8 animate-fade-in-left text-white" />
-        Cursos Recomendados
-      </h2>
-
-      <a
-        href="https://www.udemy.com/course/scala-desde-cero/?couponCode=MXABCARCTR24NEW"
-        class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
-        aria-label="Contactar conmigo"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid"
-          viewBox="0 0 256 416"
-          width="24"
-          height="24"
-          class="inline-block mr-2"
-        >
-          <defs>
-            <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a">
-              <stop stop-color="#4F4F4F" offset="0%"></stop>
-              <stop offset="100%"></stop>
-            </linearGradient>
-            <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="b">
-              <stop stop-color="white" offset="0%"></stop>
-              <stop stop-color="white" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path
-            d="M0 288v-32c0-5 116-14 192-32 37 8 64 19 64 32v32c0 13-27 24-64 32-76-18-192-27-192-32"
-            fill="url(#a)"
-            transform="matrix(1 0 0 -1 0 544)"></path>
-          <path
-            d="M0 160v-32c0-5 116-14 192-32 37 8 64 19 64 32v32c0 13-27 24-64 32-76-18-192-27-192-32"
-            fill="url(#a)"
-            transform="matrix(1 0 0 -1 0 288)"></path>
-          <path
-            d="M0 224v-96c0 8 256 24 256 64v96c0-40-256-56-256-64"
-            fill="url(#b)"
-            transform="matrix(1 0 0 -1 0 416)"></path>
-          <path
-            d="M0 96V0c0 8 256 24 256 64v96c0-40-256-56-256-64"
-            fill="url(#b)"
-            transform="matrix(1 0 0 -1 0 160)"></path>
-          <path
-            d="M0 352v-96c0 8 256 24 256 64v96c0-40-256-56-256-64"
-            fill="url(#b)"
-            transform="matrix(1 0 0 -1 0 672)"></path>
-        </svg>
-        <h3 class="text-xl font-semibold">Scala desde cero</h3>
-        <p class="text-sm text-center mt-2">
-          ¡Este es un buen lenguaje de programación 
-          para bases de datos! Scala se destaca por su 
-          capacidad para manejar grandes volúmenes de datos 
-          y su integración con herramientas como Apache Spark,
-          haciéndolo ideal para aplicaciones que requieren 
-          procesamiento eficiente y escalable.
-        </p>
-      </a>
-
-      <a
-        href="https://www.udemy.com/course/curso-de-java-nivel-basico/?kw=Java+-+nivel+ba&src=sac"
-        class="rounded-xl px-6 py-3 text-lg md:text-xl text-center font-bold border-2 border-purple-500 text-white focus:outline-none"
-        aria-label="Contactar conmigo"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid"
-          viewBox="0 0 256 346"
-          width="24"
-          height="24"
-          class="inline-block mr-2"
-        >
-          <path
-            d="M83 267s-14 8 9 11c27 3 41 2 71-3 0 0 8 5 19 9-67 29-153-2-99-17M74 230s-15 11 8 13c29 3 52 3 92-4 0 0 6 5 15 8-82 24-173 2-115-17"
-            fill="white"></path>
-          <path
-            d="M144 166c17 19-4 36-4 36s42-22 22-49c-18-26-32-38 44-82 0 0-119 29-62 95"
-            fill="white"></path>
-          <path
-            d="M233 295s10 8-10 15c-39 12-163 15-197 0-12-5 11-13 18-14l12-2c-14-9-89 19-38 28 138 22 251-10 215-27M89 190s-63 15-22 21c17 2 51 2 83-1 26-2 52-7 52-7l-16 9c-64 16-187 8-151-9 30-14 54-13 54-13M202 253c64-33 34-66 13-61l-7 2s2-3 6-5c41-14 73 43-14 66l2-2"
-            fill="white"></path>
-          <path
-            d="M162 0s36 36-34 91c-56 45-12 70 0 99-32-30-56-56-40-80 23-35 89-53 74-110"
-            fill="white"></path>
-          <path
-            d="M95 345c62 4 158-3 160-32 0 0-4 11-51 20-53 10-119 9-158 2 0 0 8 7 49 10"
-            fill="white"></path>
-        </svg>
-        <h3 class="text-xl font-semibold">Curso Java - Basico</h3>
-        <p class="text-sm text-center mt-2">
-          ¡Un curso nivel básico de Java para empezar a 
-          quemar cabeza! Aprende los fundamentos de este potente 
-          lenguaje, desde sintaxis básica hasta la programación 
-          orientada a objetos, y prepárate para resolver problemas y 
-          desarrollar tus primeras aplicaciones.
-        </p>
-      </a>
-    </nav>
-  </SectionContainer>

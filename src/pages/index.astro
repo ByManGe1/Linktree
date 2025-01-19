@@ -1,18 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Code from "../assets/Code.astro";
-import CodeCursos from "../assets/CodeCursos.astro";
 import Footer from "../components/Footer.astro";
 import Links from "../components/Links.astro";
 import Hero from "../components/Hero.astro";
+
 ---
+
 <Layout title="ManGe | Inicio">
   <main class="items-center">
-    <main class="">
-     <Hero/>
-     <Links/>
-      <Footer/>
+    <main>
+      <SectionContainer class="py-16" id="Inicio">
+        <Hero />
+        <Links />
+        <Footer />
+      </SectionContainer>
     </main>
   </main>
 </Layout>

@@ -1,0 +1,53 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import Layout from "../layouts/Layout.astro";
+const personalImageAlt = "Miguel Ángel"
+---
+
+<Layout title="ManGe | Inicio">
+  <main>
+    <SectionContainer class="py-16" id="Galery">
+      <article
+        class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+      >
+        <div
+          class="[&>p]:mb-4 [&>p>strong]:text-blue-600 dark:[&>p>strong]:text-blue-600 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+        >
+          <p>
+            Me llamo Miguel Ángel. Empecé en la
+            programación con una PS3, tenía 16 años. Actualmente estoy <strong
+              >Programando aplicaciones Webs y videojuegos</strong
+            >.
+          </p>
+
+          <p>
+            Algunos de mis éxitos incluyen <strong
+              >Desarrollo de ModMenu LunaMenu GTA5 en la comunidad de Modder de PS3</strong
+            >. Aunque hoy está desaparecido fue un gran menu de trampas en su dia.
+          </p>
+
+          <p>
+            Como creador de Webs y VideoJuegos, <strong
+              >Eh Desarrollado Bastante <em class="italic">Software & Game Development</em></strong
+            >. Mi objetivo es Desarrollar Videojuegos Unicos y Webs que sean de utilidad para la comunidad.
+          </p>
+
+          <p>
+           +Sobre Mi <strong
+              >En mi tiempo Libre me gusta leer, Aprender y tambien empeze a montar Teclados Customs</strong
+            >.
+          </p>
+        </div>
+
+        <img
+          width="200"
+          height="200"
+          src="https://avatars.githubusercontent.com/u/123424785?v=4"
+          alt={personalImageAlt}
+          class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+          style="object-position: 50% 50%"
+        />
+      </article>
+    </SectionContainer>
+  </main>
+</Layout>
